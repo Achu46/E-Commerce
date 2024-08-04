@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart</title>
+</head>
+<body>
+    <div class="cart">
+        <h1>Order Now</h1>
+        Name<input type="text" placeholder="Enter your Name" class="form"><br>
+        E-mail<input type="email" placeholder="Enter your Mail" class="form"><br>
+        City<input type="text" placeholder="Enter your City" class="form"><br>
+        Address<textarea name="" id="" placeholder="Enter your Address" class="form" ></textarea><br>
+        <h3>Payment method</h3>
+        <input type="radio">Online payment
+        <input type="radio">Cash on Delivery <br>
+        <button class="submit">buy now</button>
+    </div>
+</body>
+<style>
+     body {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        div {
+            color: yellow;
+            background-color: black;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 30px 0px grey;
+            text-align: center;
+        }
+        .form, .dob {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: transparent;
+            color: yellow;
+            border: 1px solid yellow;
+            border-radius: 10px;
+            width: calc(100% - 22px); 
+        }
+        .submit {
+            background-color: yellow;
+            color: black;
+            border-radius: 7px;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .submit:hover {
+            background-color: black;
+            color: yellow;
+            transition: 0.5s;
+            border: 1px solid yellow;
+        }
+        .gender {
+            margin-right: 10px;
+        }
+</style>
+</html>

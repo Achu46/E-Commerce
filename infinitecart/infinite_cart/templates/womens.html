@@ -1,0 +1,182 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(yellow,rgb(40, 40, 40),black);
+        }
+
+        .gallery {
+            position: relative;
+            margin: 15px;
+            float: left;
+            width: 200px;
+            margin: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 35px;
+            justify-content: space-around;
+            border-radius: 10px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            color:white;
+            border-top: 1px solid #ccc;
+            box-shadow: 0px -4px 10px 0px grey;
+            border-radius: 10px;
+        }
+
+        .gallery:hover .desc {
+            display: block;
+            transform: scale(1.0);
+            transition: 2s;
+            height: 100%;
+        }
+
+        .gallery:hover img {
+            opacity: 30;
+        }
+
+        .gallery:hover {
+            box-shadow: 0px 4px 10px 0px grey;
+            transform: scale(0.9);
+            transition: 1s;
+            border-radius: 10px;
+        }
+        .purchase{
+            text-decoration: none;
+            color: yellow;
+            width: fit-content;
+            padding: 5px;
+            margin: 20px;
+        }
+        .purchase:hover{
+            color: white;
+        }
+        .topic{
+            color: rgb(0, 0, 0);
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body><center> 
+    <form action="{%url 'womens'%}">
+        {%csrf_token%}
+    <h1 class="topic">Products for Women's</h1>
+    <div class="gallery">
+        <a target="_blank" href="./chudithar.png">
+            <img src="{% static 'chudithar.png'%}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹899 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Chudithar</strong><br>
+            Accentuate your ethnic style with this attractive and well-designed set. Style it with dazzling star-shaped drop earrings, a bajubandh, and toe-ring sandals.
+            <br> <a href="./Add to cart.html" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="./lehenga.png">
+            <img src="{% static 'lehenga.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹2599 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Lehenga</strong><br>
+            This Is Party Wear/Wedding Wear Fancy Embroidered Seunce Lehenga Choli. This Lehenga Is Pure Viscose Nylon Velvet Smei Stitched Embroidered Lehenga. Lehenga Fabric: Viscose Velvet, Blouse Fabric: Viscose Velvet, Lehenga Length: 2.20 Mtr, Blouse Length: 0.80 Mtr, Dupatta Length: 2.10 Mtr
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+    <div class="gallery">
+        <a target="_blank" href="./top.png">
+            <img src="{% static 'top.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Top</strong><br>
+            THIS IS A PRINTED -COLOR TANK TOP FROM SOLLOBELL, DESIGNED B IN A FROM-FITTED STYLE.IT FEATURES A ROUND NECKLINE AND HALF SLEEVES DESIGN, MAKING IT PERFACT FOR LAYERING OR WEARING ON ITS OWN. THE SIZE ENAURES A COMFORTABLE AND FLATTERING FIT FOR SMALLER FRAMES.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./long frock.png">
+            <img src="{% static 'long frock.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹2999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Long Frock</strong><br>
+            Elevate your style quotient with ARK FASHION stunning women's gowns. Discover the perfect gown frock for every occasion in our exclusive collection. Whether you're attending a glamorous party or a formal event, our long gowns for women are designed to make you stand out. Arkavya brings you the latest in women's fashion, combining quality and affordability to create a delightful shopping experience. 
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./silksaree.png">
+            <img src="{% static 'silksaree.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹4999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Silk Saree</strong><br>
+            Lightweight and flowy, the exquisite georgette saree fabric gives the saree a graceful look. The translucent fabric flows beautifully and adds to the elegance of your overall look. Long durations can be spent wearing this saree comfortably because the fabric is soft on the skin. Georgette keeps you cool and comfortable because of its innate ability to ensure breathability.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./girls tshirt.png">
+            <img src="{% static 'girls tshirt.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹499 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Girls Tshirt</strong><br>
+            Introducing a women's round neck T- shirt, featuring a trendy and eye- catching printed pattern. This T-shirt allows you to express your unique style and make a fashion statement wherever you go. The vibrant colors and intricate design are sure to turn heads and add a touch of excitement to your casual outfits.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./Grand Saree.png">
+            <img src="{% static 'Grand Saree.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹3999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Grand Saree</strong><br>
+            This stunning kanjivaram saree showcases an exquisite woven design that adds a touch of elegance and sophistication to your ensemble. The intricate patterns and delicate motifs are a testament to the skilled craftsmanship and attention to detail that goes into creating this masterpiece. With its rich and vibrant colors, this saree is sure to make you stand out at any party or festive occasion.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./pattila.png">
+            <img src="{% static 'pattila.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹699 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Pataila</strong><br>
+            We are manufacturers of women ethnic wear, we use best cotton fabric for our patiala salwar. We deals in all kinds of bottom wear and this cotton patiala salwar made up of fine cotton fabric and free in size, can be used for S, M, L sizes. Must try.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+</center></form>
+</body>
+</html>

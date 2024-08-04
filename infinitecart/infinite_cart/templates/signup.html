@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <style>
+        body {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        div {
+            color: yellow;
+            background-color: black;
+            width: 90%;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0px 2px 30px 0px grey;
+            text-align: center;
+        }
+        .form, .dob {
+            padding: 10px;
+            margin: 10px 0;
+            background-color: transparent;
+            color: yellow;
+            border: 1px solid yellow;
+            border-radius: 10px;
+            width: calc(100% - 22px); 
+        }
+        .submit {
+            background-color: yellow;
+            color: black;
+            border-radius: 7px;
+            padding: 10px;
+            width: 100%;
+            margin-top: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .submit:hover {
+            background-color: black;
+            color: yellow;
+            transition: 0.5s;
+            border: 1px solid yellow;
+        }
+        .gender {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+<center>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+</head>
+<body>
+    <div>
+        <form action="{% url 'create' %}" method="POST">
+            {% csrf_token %}
+            <h1>Sign up</h1>
+            <label>Firstname</label>
+            <input type="text" name="Firstname" class="form" placeholder="First Name" required ><br>
+            <label>Lastname</label>
+            <input type="text" name="Lastname" class="form" placeholder="Last Name" required ><br>
+            <label>Email</label>
+            <input type="email" name="Email" class="form" placeholder="Email address" required ><br>
+            <label>Password</label>
+            <input type="password" name="Password" class="form" placeholder="Password" required ><br>
+            <label>Confirm Password</label>
+            <input type="password" name="ConfirmPassword" class="form" placeholder="Confirm Password" required ><br>
+            <label>DOB</label>
+            <input type="date" class="dob" placeholder="Date" required name="DOB"><br>
+            <label>Gender</label><br>
+            <input type="radio" name="gender" class="gender" value="male" required > Male
+            <input type="radio" name="gender" class="gender" value="female" required > Female<br>
+            <button class="submit">Sign up</button>
+        </form>
+    </div>
+</body>
+</html>
+
+</center>
+</body>
+</html>

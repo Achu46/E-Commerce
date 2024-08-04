@@ -1,0 +1,184 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men's</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(yellow,rgb(40, 40, 40),black);
+        }
+
+        .gallery {
+            position: relative;
+            margin: 15px;
+            float: left;
+            width: 200px;
+            margin: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 35px;
+            justify-content: space-around;
+            border-radius: 10px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            color:white;
+            border-top: 1px solid #ccc;
+            box-shadow: 0px -4px 10px 0px grey;
+            border-radius: 10px;
+        }
+
+        .gallery:hover .desc {
+            display: block;
+            transform: scale(1.2);
+            transition: 2s;
+            height: 100%;
+        }
+
+        .gallery:hover img {
+            opacity: 30;
+        }
+
+        .gallery:hover {
+            box-shadow: 0px 4px 10px 0px grey;
+            transform: scale(0.9);
+            transition: 1s;
+            border-radius: 10px;
+        }
+        .purchase{
+            text-decoration: none;
+            color: yellow;
+            width: fit-content;
+            padding: 5px;
+            margin: 20px;
+        }
+        .purchase:hover{
+            color: white;
+        }
+        .topic{
+            color: rgb(0, 0, 0);
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body><center>   
+    <form action="{%url 'mens'%}">
+        {%csrf_token%}
+    <h1 class="topic">Products for Men's</h1>
+    <div class="gallery">
+        <a target="_blank" href="./blackshirt 2.png">
+            <img src="{%static 'blackshirt 2.png'%}" alt="Black shirt">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹799 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Blackshirt</strong><br>
+            Classic Solid Pattern Featuring a classic solid pattern, this men's casual shirt exudes an air of style and sophistication, making you stand apart from the crowd. The versatile design ensures that you can effortlessly pair the shirt with various outfits.
+            <br> <a href="./Add to cart.html" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="./colorshirt.jpg">
+            <img src="{%static 'colorshirt.jpg'%}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹599 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Color Checked shirt</strong><br>
+            Add style to your wardrobe with this tartan checked shirt composed of fine cotton fabric that ensures breathability and comfort all day long.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+  
+
+    <div class="gallery">
+        <a target="_blank" href="./blackpant.png">
+            <img src="{%static 'blackpant.png'%}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Blackpant</strong><br>
+            Introducing a men's formal trousers that are designed to exude a classic and sophisticated style. With their solid pattern, these trousers offer a timeless appeal that is perfect for formal occasions, allowing you to create a polished and refined look.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./baggy.jpg">
+            <img src="{%static 'baggy.jpg'%}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹1699 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Baggy</strong><br>
+            Elevate your fashion game with our Neutral Light brown Men Baggy Fit Cargo jeans from Bwolves. Crafted with care, these cargos are designed to provide both style and comfort. The neutral light brown hue adds a touch of sophistication to your casual wardrobe.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./hoodie.png">
+            <img src="{%static 'hoodie.png'%}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Hoodie</strong><br>
+            Introducing our Adro Mens Premium 340 GSM Cotton Fleece Hoodies the epitome of comfort, style, and quality. Crafted with meticulous attention to detail, these hoodies are designed to elevate your wardrobe and keep you cozy in every season.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./otshirt.png">
+            <img src="{%static 'otshirt.png'%}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Over Sized tshirt</strong><br>
+            We are Farbot of branded apparel, providing the best quality apparel at a very affordable price. We take sincere efforts in styling and manufacturing of the product to make sure it fits both your personality and your wallet.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./trousers.png">
+            <img src="{%static 'trousers.png'%}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹399 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Trousers</strong><br>
+            FTX Men's Dri-Fit Fabric all purpose shorts. Comfortable & Attractive. Sports theme designs. Adjustable drawstring for greater waist comfort, the standard length is more convenient for leg movement and styled with zipper on both side 
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./jean.jpg">
+            <img src="{%static 'jean.jpg'%} " alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹1999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Jeans</strong><br>
+            Men's denim jeans offer a sleek and contemporary silhouette, featuring a close-fitting design that accentuates the legs. Crafted from durable denim fabric, these jeans provide a stylish and versatile option for various occasions.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+</center></form>
+</body>
+</html>

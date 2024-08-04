@@ -1,0 +1,184 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kids</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(yellow,rgb(40, 40, 40),black);
+        }
+
+        .gallery {
+            position: relative;
+            margin: 15px;
+            float: left;
+            width: 200px;
+            margin: 2%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 35px;
+            justify-content: space-around;
+            border-radius: 10px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .desc {
+            padding: 15px;
+            text-align: center;
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            color:white;
+            border-top: 1px solid #ccc;
+            box-shadow: 0px -4px 10px 0px grey;
+            border-radius: 10px;
+        }
+
+        .gallery:hover .desc {
+            display: block;
+            transform: scale(1.0);
+            transition: 2s;
+            height: 100%;
+        }
+
+        .gallery:hover img {
+            opacity: 30;
+        }
+
+        .gallery:hover {
+            box-shadow: 0px 4px 10px 0px grey;
+            transform: scale(0.9);
+            transition: 1s;
+            border-radius: 10px;
+        }
+        .purchase{
+            text-decoration: none;
+            color: yellow;
+            width: fit-content;
+            padding: 5px;
+            margin: 20px;
+        }
+        .purchase:hover{
+            color: white;
+        }
+        .topic{
+            color: rgb(0, 0, 0);
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body><center>
+    <form action="{%url 'kids'%}">
+        {%csrf_token%}
+     <h1 class="topic">Products for Kid's</h1>
+    <div class="gallery">
+        <a target="_blank" href="./party dress.png">
+            <img src="{% static 'party dress.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹1299 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Party Dress</strong><br>
+            A curated wardrobe to cover all occasion needs of your little one. We make products that are designed to last, influenced by the culture we grew up in.
+            <br> <a href="./Add to cart.html" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+
+    <div class="gallery">
+        <a target="_blank" href="./night dress.png">
+            <img src="{% static 'night dress.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹399 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Night Dress</strong><br>
+            Grab these Cute, Kids T-Shirt & Pyjama Set for your little one from Bumzee. Your little one is sure to enjoy these collection. Our Full sleeves T-Shirt are ideal for everyday use and the Full Sleeve
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>
+  
+
+    <div class="gallery">
+        <a target="_blank" href="./kurta.png">
+            <img src="{% static 'kurta.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹1999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Kurta</strong><br>
+            Make your child stand out in the crowd with our range of pink & white kurta pyjama set for boys. Featuring stylish designs, and comfortable fabrics, our collection is perfect for the festive season.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./coat suit.png">
+            <img src="{% static 'coat suit.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹1809 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Coat Suit</strong><br>
+            This clothing set consists of a shirt, a pair of trousers, a waistcoast, and a coat. Shirt having a collar, long sleeves, button closure and trousers, has a partially elasticated waistband with a button closure, zip fly and two pockets. Comes with a long sleeves coat and a waistcoat(only in 5 Piece suits) with suspendors having button closure. Comes with a matching bow tie and other accessories. Subtle and stylish, perfect for the child.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./frock.png">
+            <img src="{% static 'frock.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹1599 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Frock</strong><br>
+            Adorable Midi-Length Dresses for Your Newborn Princess from A.R.K. Dresses. Explore Flipkart's Collection of Soft and Stylish Dresses for Baby Girls, Perfect for Every Occasion. Shop Now and Dress Her in Comfortable Elegance.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./fairy .png">
+            <img src="{% static 'fairy .png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹2499 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Fairy</strong><br>
+            Baby girl's Party wear stylish Dress outfits lovable and great in finish and comfort, its designed for special occasions. This dress for your little Angel to make her feel special this festive season, thank you.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./gown.png">
+            <img src="{% static 'gown.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹1399 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Gown</strong><br>
+            Featuring a gathered design, this dress adds a touch of elegance to your little one's wardrobe. The full- length silhouette enhances the overall look and creates a stunning appearance.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div>  <div class="gallery">
+        <a target="_blank" href="./kurti.png">
+            <img src="{% static 'kurti.png' %}" alt="">
+        </a>
+        <div class="desc">
+            <strong style="color: red;">PRICE:₹999 <br></strong>
+            <strong style="color: rgb(255, 255, 255);">Product Highlights</strong><br><strong style="color: yellow;">Kurti</strong><br>
+            Designed in a fit and flare style, this dress is perfect for various occasions. Whether it's a casual outing or a special event, your little one will look effortlessly fashionable.
+            <br> <a href="" class="purchase">Add to cart</a>
+        </div><br>
+       
+    </div></form>  
+</center>
+</body>
+</html>
